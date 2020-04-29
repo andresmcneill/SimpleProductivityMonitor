@@ -1,0 +1,100 @@
+container:
+  type: ColumnPanel
+  event_bindings: {}
+  properties: {col_widths: '{}'}
+components:
+- type: XYPanel
+  properties: {height: 91}
+  name: xy_panel_1
+  layout_properties: {grid_position: 'IJWUBG,BWRSHK'}
+  components:
+  - type: DatePicker
+    properties: {role: null, align: left, max_date: '', pick_time: true, tooltip: '',
+      placeholder: '', border: '', enabled: true, foreground: '', visible: true, font_size: null,
+      font: '', spacing_above: small, spacing_below: small, italic: false, date: '',
+      min_date: '', background: '', bold: false, underline: false, format: ''}
+    name: end_date
+    layout_properties: {grid_position: 'MGCXMB,CUCMEG', x: 425, y: 10, width: 161}
+    event_bindings: {}
+  - type: DatePicker
+    properties: {role: null, align: left, max_date: '', pick_time: true, tooltip: '',
+      placeholder: '', border: '', enabled: true, foreground: '', visible: true, font_size: null,
+      font: '', spacing_above: small, spacing_below: small, italic: false, date: '',
+      min_date: '', background: '', bold: false, underline: false, format: ''}
+    name: start_date
+    layout_properties: {grid_position: 'IESWZU,WJXVCT', x: 246, y: 10, width: 169}
+    event_bindings: {change: start_date_change}
+  - type: Label
+    properties: {role: subheading, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Time Select:', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: select_time_lbl
+    layout_properties: {x: 22, y: 10, width: 101}
+    event_bindings: {}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Submit date, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: button_1
+    layout_properties: {x: 440.75, y: 58, width: 136}
+    event_bindings: {click: button_1_click}
+  - type: DropDown
+    properties:
+      role: null
+      align: full
+      tooltip: ''
+      placeholder: ''
+      border: ''
+      enabled: true
+      foreground: ''
+      items: ['']
+      visible: true
+      font_size: null
+      font: ''
+      spacing_above: small
+      spacing_below: small
+      italic: false
+      background: ''
+      bold: false
+      underline: false
+      include_placeholder: false
+    name: time_select_dropdown
+    layout_properties:
+      col_widths: {}
+      grid_position: RPPQZB,CMOEAC
+      x: 114.75
+      y: 10
+      width: 121.25
+    event_bindings: {show: time_select_dropdown_show, change: time_select_dropdown_change}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_1
+  layout_properties: {grid_position: 'MZKXTA,AUYVNB'}
+  components:
+  - type: Label
+    properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: App Timeline, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: apptitle
+    layout_properties: {grid_position: 'UKNPRT,JJILEG'}
+    event_bindings: {}
+  - type: Image
+    properties: {}
+    name: image_1
+    layout_properties: {grid_position: 'ZNGWKK,WOFGLK'}
+- type: Label
+  properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
+    visible: true, text: Web Timeline, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: webtitle
+  layout_properties: {grid_position: 'EDNEBD,WJAQRN'}
+  event_bindings: {}
+- type: Image
+  properties: {}
+  name: image_2
+  layout_properties: {grid_position: 'NHYLHC,DFHYEI'}
+is_package: true

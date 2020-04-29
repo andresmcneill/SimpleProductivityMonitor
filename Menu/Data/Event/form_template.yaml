@@ -1,0 +1,23 @@
+container:
+  type: DataRowPanel
+  event_bindings: {}
+components:
+- type: XYPanel
+  properties: {height: 48, width: 696}
+  name: xy_panel_1
+  layout_properties: {}
+  components:
+  - type: Label
+    properties: {}
+    name: label_2
+    layout_properties: {x: 174.75, y: 10, width: 295}
+    event_bindings: {}
+  - type: Label
+    properties: {}
+    name: label_1
+    layout_properties: {x: 10, y: 10, width: 160}
+  - type: Label
+    properties: {}
+    name: label_3
+    layout_properties: {x: 492.75, y: 10, width: 160}
+is_package: true

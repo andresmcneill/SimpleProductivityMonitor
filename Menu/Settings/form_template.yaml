@@ -1,0 +1,60 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+  event_bindings: {}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_1
+  layout_properties: {grid_position: 'VNEJOL,PWBICS'}
+  components:
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Add app category, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: add_category_btn
+    layout_properties: {grid_position: 'ADOKHZ,QRCRMK'}
+    event_bindings: {click: add_category_btn_click}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Save, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: save_category_btn
+    layout_properties: {grid_position: 'ADOKHZ,TDTSSB'}
+    event_bindings: {click: save_btn_click}
+  event_bindings: {}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_2
+  layout_properties: {grid_position: 'UBZAMW,HJMLBZ'}
+  components:
+  - type: LinearPanel
+    properties: {}
+    name: category_panel
+    layout_properties: {grid_position: 'KGINMV,MRXYNJ'}
+    event_bindings: {}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: add web category, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: add_subcat_btn
+    layout_properties: {grid_position: 'EVUQBB,IYJRJT'}
+    event_bindings: {click: add_subcat_btn_click}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: save, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: save_subcat_btn
+    layout_properties: {grid_position: 'EVUQBB,ZITGUP'}
+    event_bindings: {click: save_subcat_btn_click}
+- type: LinearPanel
+  properties: {}
+  name: subcategory_panel
+  layout_properties: {grid_position: 'LXVQTV,AVOVEN'}
+  event_bindings: {}
+  components: []
+is_package: true

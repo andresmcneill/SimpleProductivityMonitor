@@ -1,0 +1,64 @@
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{"BTTZVF":54,"CKSVPT":6}'}
+  name: cat_container
+  layout_properties: {grid_position: 'ZWAQSG,UEFFCV'}
+  components:
+  - type: GridPanel
+    properties: {}
+    name: cat_labels
+    layout_properties: {grid_position: 'SMJETT,BTTZVF'}
+    components:
+    - type: TextBox
+      properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Category,
+        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false}
+      name: cat_name
+      layout_properties: {row: KQZLTN, width_xs: 4, col_xs: 0, width: 158}
+      event_bindings: {}
+    - type: TextBox
+      properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '''|''
+          separated list', border: '', enabled: true, foreground: '', visible: true,
+        text: '', font_size: null, font: '', spacing_above: small, type: text, spacing_below: small,
+        italic: false, background: '', bold: false, underline: false}
+      name: cat_list
+      layout_properties: {row: KQZLTN, width_xs: 4, col_xs: 4, width: 335}
+      event_bindings: {}
+    - type: DropDown
+      properties:
+        role: null
+        align: full
+        tooltip: ''
+        placeholder: productivity
+        border: ''
+        enabled: true
+        foreground: ''
+        items: [Neutral, Productive, Unproductive]
+        visible: true
+        font_size: null
+        font: ''
+        spacing_above: small
+        spacing_below: small
+        italic: false
+        background: ''
+        bold: false
+        underline: false
+        include_placeholder: false
+      name: prod_select
+      layout_properties: {row: KQZLTN, width_xs: 3, col_xs: 9, width: 111.188}
+      event_bindings: {}
+    event_bindings: {}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: solid, enabled: true,
+      foreground: '', visible: true, text: X, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: delete_btn
+    layout_properties: {grid_position: 'SMJETT,CKSVPT'}
+    event_bindings: {click: delete_btn_click}
+  event_bindings: {}
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+  event_bindings: {}

@@ -1,0 +1,131 @@
+container:
+  type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: none, spacing_above: small, col_widths: '{}', spacing_below: small,
+    background: ''}
+  event_bindings: {}
+components:
+- type: XYPanel
+  properties: {height: 102}
+  name: xy_panel_1
+  layout_properties: {grid_position: 'BCBOOD,YTTRJM'}
+  components:
+  - type: DatePicker
+    properties: {role: null, align: left, max_date: '', pick_time: true, tooltip: '',
+      placeholder: '', border: '', enabled: true, foreground: '', visible: true, font_size: null,
+      font: '', spacing_above: small, spacing_below: small, italic: false, date: '',
+      min_date: '', background: '', bold: false, underline: false, format: ''}
+    name: start_date
+    layout_properties: {grid_position: 'IESWZU,WJXVCT', x: 219, y: 10, width: 196}
+  - type: DatePicker
+    properties: {role: null, align: left, max_date: '', pick_time: true, tooltip: '',
+      placeholder: '', border: '', enabled: true, foreground: '', visible: true, font_size: null,
+      font: '', spacing_above: small, spacing_below: small, italic: false, date: '',
+      min_date: '', background: '', bold: false, underline: false, format: ''}
+    name: end_date
+    layout_properties: {grid_position: 'MGCXMB,CUCMEG', x: 434, y: 10, width: 190}
+  - type: Label
+    properties: {role: subheading, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Time Select:', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: none, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_5
+    layout_properties: {grid_position: 'RLRVRI,TXERBC', x: 0, y: 13, width: 99}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Submit Date, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: button_1
+    layout_properties: {x: 425, y: 61, width: 135}
+    event_bindings: {click: button_1_click}
+  - type: DropDown
+    properties: {}
+    name: time_select_dropdown
+    layout_properties: {x: 100, y: 10, width: 109}
+    event_bindings: {show: time_select_dropdown_show, change: time_select_dropdown_change}
+- type: GridPanel
+  properties: {}
+  name: grid_panel_1
+  layout_properties: {grid_position: 'MFOJVY,OTRGHA'}
+  event_bindings: {}
+  components:
+  - type: Label
+    properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Top Apps, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: top_app_lbl
+    layout_properties: {row: MYCNPD, width_xs: 3, col_xs: 0, x: 10, y: 10, width: 182,
+      grid_position: 'XTUYXX,BLXFBK'}
+    event_bindings: {}
+  - type: Label
+    properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Top Web Titles, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_4
+    layout_properties: {row: MYCNPD, width_xs: 5, col_xs: 5, width: 73}
+    event_bindings: {}
+  - type: RepeatingPanel
+    properties: {item_template: Menu.Activity.AppInfo}
+    name: top_apps_repeating
+    layout_properties: {row: VCFJXA, width_xs: 5, col_xs: 0, grid_position: 'XTUYXX,BLXFBK
+        XGGWAR,NOXTAA', x: 0, y: 51, width: 201}
+    event_bindings: {}
+  - type: RepeatingPanel
+    properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
+      visible: true, spacing_above: small, spacing_below: small, item_template: Menu.Activity.AppInfo,
+      background: ''}
+    name: top_web_repeating
+    layout_properties: {row: VCFJXA, width_xs: 7, col_xs: 5, width: 73.3281}
+    event_bindings: {}
+  - type: Label
+    properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Productivity: All Categories', font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: label_1
+    layout_properties: {row: MDTGLP, width_xs: 8, col_xs: 3, width: 177}
+    event_bindings: {}
+  - type: Plot
+    properties: {}
+    name: category_pie
+    layout_properties: {grid_position: 'XTUYXX,WSZCTT SXJQIE,SIXXEJ', row: FWUNXM,
+      width_xs: 9, col_xs: 1}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: You are blank percent unproductive, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: prod_label
+    layout_properties: {grid_position: 'VGYXVD,YTGAOT', row: GFKCVN, width_xs: 7,
+      col_xs: 3}
+    event_bindings: {}
+  - type: Label
+    properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Productivity: App Categories', font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: label_2
+    layout_properties: {row: MOIYPH, width_xs: 4, col_xs: 0, width: 177}
+    event_bindings: {}
+  - type: Label
+    properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Productivity: Web Categories', font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: label_3
+    layout_properties: {row: MOIYPH, width_xs: 6, col_xs: 6, width: 435}
+    event_bindings: {}
+  - type: Plot
+    properties: {}
+    name: app_pie
+    layout_properties: {row: XDWOCQ, width_xs: 6, col_xs: 0}
+    event_bindings: {}
+  - type: Plot
+    properties: {}
+    name: web_pie
+    layout_properties: {row: XDWOCQ, width_xs: 6, col_xs: 6}
+    event_bindings: {}
+is_package: true

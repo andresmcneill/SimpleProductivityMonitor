@@ -1,0 +1,61 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+  event_bindings: {}
+components:
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+  event_bindings: {}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: nav_bar
+  layout_properties: {slot: left-nav}
+  components:
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Activity, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: activity_btn
+    layout_properties: {grid_position: 'AQCXPX,TEXKYP'}
+    event_bindings: {show: activity_btn_show, click: activity_btn_click}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Timeline, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: timeline_btn
+    layout_properties: {grid_position: 'ULCTRY,PRQMGQ'}
+    event_bindings: {click: timeline_btn_click}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Data, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: data_btn
+    layout_properties: {grid_position: 'FDMWCB,TLKDYR'}
+    event_bindings: {click: data_btn_click}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Settings, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: settings_btn
+    layout_properties: {grid_position: 'OZSEOW,RCQIKW'}
+    event_bindings: {click: settings_btn_click}
+  event_bindings: {}
+- type: ColumnPanel
+  properties: {}
+  name: content_pane
+  layout_properties: {slot: default}
+  event_bindings: {}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Activity Summary, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: page_title
+  layout_properties: {slot: title}
